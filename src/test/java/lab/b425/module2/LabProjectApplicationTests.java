@@ -3,10 +3,8 @@ package lab.b425.module2;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.TypeReference;
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import lab.b425.module2.entity.ResponseEntity;
-import lab.b425.module2.entity.User;
-import lab.b425.module2.mapper.UserMapper;
+import lab.b425.module2.dataSharing.entity.ResponseEntity;
+import lab.b425.module2.dataSharing.mapper.UserMapper;
 import lombok.Data;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,24 +30,7 @@ class LabProjectApplicationTests {
         this.userMapper = userMapper;
     }
 
-    //    @Test
-    public void mybatisPlusTest() {
-        User user = new User();
-//        user.setId(1);
-//        user.setName("wangwu");
-//        user.setBlockchainAccount("0x1234567890123456");
-//        user.setPassword("123");
-//        user.setInfo("我是王五");
 
-        userMapper.insert(user);
-//        user.setId(2);
-//        user.setName("lisi");
-//        user.setBlockchainAccount("0x1234567890123456");
-//        user.setPassword("123");
-//        user.setInfo("我是李四");
-//        userMapper.insert(user);
-        System.out.println(userMapper.selectList(null));
-    }
 
     //    @Test
     public void jsonTest() {
@@ -96,7 +77,7 @@ class LabProjectApplicationTests {
         String name;
     }
 
-    @Test
+//    @Test
     public void jsonTest4() {
 
         List<Student> list = new ArrayList<>();
@@ -110,7 +91,7 @@ class LabProjectApplicationTests {
 
     }
 
-    @Test
+//    @Test
     public void dotTest() {
         testUtil("a#1", "b#2", "c#3");
     }
@@ -121,15 +102,7 @@ class LabProjectApplicationTests {
 
     }
 
-    @Test
-    public void jsonTest5() {
-        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
-        queryWrapper.select("peer_id", "name", "id");
-        List<User> userList = userMapper.selectList(queryWrapper);
-        System.out.println(JSON.toJSON(userList).toString());
 
-
-    }
 
     @Test
     public void jsonTest6() {

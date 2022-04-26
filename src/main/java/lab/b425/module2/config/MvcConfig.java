@@ -14,7 +14,37 @@ public class MvcConfig implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new LoginHandlerInterceptor())
-                .addPathPatterns("/addAsset","/allocRole","/rewriteChTime","/checkRole","/addAuthorityToRole","/createRole"); //实际应该将所有用户接口加入拦截，系统内部接口直接放行
+                .addPathPatterns("/deleteUser",
+                        "/updateUser",
+                        "/addPurchase",
+                        "/addMaking",
+                        "/addSettlement",
+                        "/addWarehouse",
+                        "/addTransaction",
+                        "/getTransaction",
+                        "/confirmTransaction",
+                        "/addSale",
+                        "/addRepair",
+                        "/queryAsset",
+                        "/queryMaking",
+                        "/queryMaterial",
+                        "/queryPurchase",
+                        "/querySettlement",
+                        "/queryWareHouse",
+                        "/querySale",
+                        "/queryTransaction",
+                        "/queryMaterialByCode",
+                        "/queryPurchaseByCode",
+                        "/querySaleByCode",
+                        "/queryTransactionById",
+                        "/allocAuthority",
+                        "/queryGainedAuthority",
+                        "/queryAuthorityToOthers",
+                        "/removeAuthorityToOthers",
+                        "/crossChainTransaction",
+                        "/getCrossChainTransaction",
+                        "/confirmCrossChainTransaction"
+                        ); //实际应该将所有用户接口加入拦截，系统内部接口直接放行
     }
 
     //视图跳转

@@ -15,7 +15,7 @@ public class CodeGenerator {
 
         // 全局配置
         GlobalConfig gc = new GlobalConfig();
-        String projectPath = System.getProperty("user.dir");
+            String projectPath = System.getProperty("user.dir");
         gc.setOutputDir(projectPath + "/src/main/java");
         gc.setAuthor("MFL");
         gc.setOpen(false);
@@ -27,7 +27,7 @@ public class CodeGenerator {
 
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://localhost:3306/mul_service&transaction?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true&Timezone=GMT%2B8");
+        dsc.setUrl("jdbc:mysql://localhost:3306/data_sharing_module?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true&Timezone=GMT%2B8");
         // dsc.setSchemaName("public");
         dsc.setDriverName("com.mysql.cj.jdbc.Driver");
         dsc.setUsername("root");
@@ -38,7 +38,7 @@ public class CodeGenerator {
         // 包配置
         PackageConfig pc = new PackageConfig();
         pc.setModuleName("AccessControl");
-        pc.setParent("com.github.subject2");
+        pc.setParent("lab.b425.module2");
         mpg.setPackageInfo(pc);
 
         // 策略配置
@@ -47,8 +47,10 @@ public class CodeGenerator {
         strategy.setColumnNaming(NamingStrategy.underline_to_camel);
         strategy.setEntityLombokModel(true);
         strategy.setRestControllerStyle(true);
-        strategy.setLogicDeleteFieldName("deleted");
-        strategy.setVersionFieldName("version");
+        //配置逻辑删除
+//        strategy.setLogicDeleteFieldName("deleted");
+        //配置乐观锁
+//        strategy.setVersionFieldName("version");
         strategy.setControllerMappingHyphenStyle(true);
         mpg.setStrategy(strategy);
 

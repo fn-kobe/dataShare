@@ -20,7 +20,7 @@ import java.util.ArrayList;
 @EnableSwagger2
 public class SwaggerConfig {
 
-    //配置swagger的docket实例
+    //配置swagger的docket实例,可以有多个docket分组用以区分不同接口
     @Bean
     public Docket docket(Environment environment) {
         //设置使用swagger的环境
@@ -29,6 +29,7 @@ public class SwaggerConfig {
         //通过environment判断自己处在的环境中
         boolean flag = environment.acceptsProfiles(profiles);
 
+        //设置docket分组
         return new Docket(DocumentationType.SWAGGER_2)
                 .enable(flag)
                 .apiInfo(apiInfo())
@@ -36,6 +37,7 @@ public class SwaggerConfig {
                 .select().apis(RequestHandlerSelectors.basePackage("lab.b425.module2")).build();
     }
 
+    //配置apiInfo信息
     private ApiInfo apiInfo() {
         return new ApiInfo(
                 "Api Documentation",

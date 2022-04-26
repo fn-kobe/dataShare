@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 @SpringBootApplication
-@MapperScan("lab.b425.module2.mapper")
+@MapperScan("lab.b425.module2.dataSharing.mapper")
 public class LabProjectApplication {
 
     public static void main(String[] args) {
