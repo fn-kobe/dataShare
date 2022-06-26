@@ -173,26 +173,28 @@ public class HttpTest {
     public static void main(String[] args) {
 //        String url = "http://localhost:8080/user/logout";
 //        sendGet(url);
-        Map<Object, Object> payloadMap = new HashMap<>();
-        payloadMap.put("id", "test06");
-        payloadMap.put("info", "测试节点");
-        payloadMap.put("name", "06");
-        payloadMap.put("password", "112233");
-        payloadMap.put("peerId", "01#a");
-        String url = "http://localhost:8080/user";
+//        Map<Object, Object> payloadMap = new HashMap<>();
+//        payloadMap.put("id", "test06");
+//        payloadMap.put("info", "测试节点");
+//        payloadMap.put("name", "06");
+//        payloadMap.put("password", "112233");
+//        payloadMap.put("peerId", "01#a");
+//        String url = "http://localhost:8080/user";
 //        sendPost2(url,payloadMap);
 
         Map<Object, Object> payloadMap2 = new HashMap<>();
-        payloadMap2.put("id", "test01");
-        payloadMap2.put("password", "123");
-        String url2 = "http://localhost:8080/user/login";
-//        sendPost2(url2,payloadMap);
-        Map<Object, Object> payloadMap3 = new HashMap<>();
-        payloadMap3.put("carId", "CAR0");
-        String url3 = "http://192.168.1.163:8080/fabricProject_war_exploded/queryCar";
-//        sendPost2(url3,payloadMap3);
+        payloadMap2.put("carId", "CAR0");
+        payloadMap2.put("userConfigPath", "/Users/zhaoyuting/IdeaProjects/fabricProject/src/main/resources/network_resources/userid_properties/org1.user1.properties");
+        payloadMap2.put("SelectedChannel", "supplychannelone");
 
-        sendGet("http://192.168.1.163:8080/fabricProject_war_exploded/queryAllMaterials");
+        String url2 = "http://192.168.123.47:8080/fabricProject_war_exploded/queryCar";
+        sendPost2(url2,payloadMap2);
+//        Map<Object, Object> payloadMap3 = new HashMap<>();
+//        payloadMap3.put("carId", "CAR0");
+//        String url3 = "http://192.168.1.163:8080/fabricProject_war_exploded/queryCar";
+//        sendPost2(url3,payloadMap3);
+//
+//        sendGet("http://192.168.1.163:8080/fabricProject_war_exploded/queryAllMaterials");
 
 
 

@@ -14,6 +14,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+/**
+ * <p>
+ * 用户管理服务类
+ * </p>
+ *
+ * @author MFL
+ * @since 2022-04-17
+ */
 @Service
 public class UserService {
     /**

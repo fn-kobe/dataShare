@@ -1,6 +1,7 @@
 package lab.b425.module2.dataSharing.entity;
 
 import com.alibaba.fastjson.annotation.JSONField;
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -12,7 +13,7 @@ import java.util.Date;
 
 /**
  * <p>
- * 
+ * 对应数据库表格的实体类
  * </p>
  *
  * @author MFL
@@ -26,7 +27,7 @@ public class Purchase implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @ApiModelProperty(value = "主键id")
-    @TableId()
+    @TableId(type = IdType.AUTO)
     private String purchaseId;
 
     @ApiModelProperty(value = "购买编号")

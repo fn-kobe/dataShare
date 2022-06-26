@@ -1,5 +1,14 @@
 package lab.b425.module2.dataSharing.entity;
 
+
+/**
+ * <p>
+ * 返回信息的实体类
+ * </p>
+ *
+ * @author MFL
+ * @since 2022-04-17
+ */
 public class ResponseEntity {
     /**
      * 200 请求成功。一般用于GET与POST请求

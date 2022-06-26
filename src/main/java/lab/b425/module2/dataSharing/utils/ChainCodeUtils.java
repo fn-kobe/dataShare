@@ -1,4 +1,4 @@
-package lab.b425.module2.chaincode;
+package lab.b425.module2.dataSharing.utils;
 
 import org.hyperledger.fabric.gateway.*;
 
@@ -15,15 +15,12 @@ import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
 import java.util.Properties;
 
-//@Repository
-public class SampleChainCode {
-    public static Contract contract;
-
-    public static void main(String[] args)  {
+public class ChainCodeUtils {
+    public static Contract getContract() {
         try {
             //获取相应参数
             Properties properties = new Properties();
-            InputStream inputStream = SampleChainCode.class.getResourceAsStream("/fabric.config.properties");
+            InputStream inputStream = ChainCodeUtils.class.getResourceAsStream("/fabric.config.properties");
             properties.load(inputStream);
             String networkConfigPath = properties.getProperty("networkConfigPath");
             String channelName = properties.getProperty("channelName");
@@ -47,32 +44,11 @@ public class SampleChainCode {
             //获取通道
             Network network = gateway.getNetwork(channelName);
             //获取合约对象
-            contract = network.getContract(contractName);
-
-            //调用合约初始化方法
-            contract.createTransaction("InitLedger").submit();
-            //调用合约查询所有资产
-            byte[] queryAllAssets = contract.evaluateTransaction("queryAllCars");
-            System.out.println("所有资产：" + new String(queryAllAssets, StandardCharsets.UTF_8));
-
-            //交易资产
-//            contract.createTransaction("TransferAsset").submit("asset6", "Tomoko");
-
-            //新建资产
-//            contract.createTransaction("CreateAsset").submit("asset7", "black", "1", "mfl", "100");
-
-            //查询更新后的资产
-//            byte[] queryAllAssetsAfter = contract.evaluateTransaction("GetAllAssets");
-//            String res = new String(queryAllAssetsAfter, StandardCharsets.UTF_8);
-//            System.out.println(res);
-
-            //转换成数组备用
-//            List<Map<String,String>> listObjectFir = (List<Map<String,String>>) JSONArray.parse(res);
-//            System.out.println(listObjectFir);
-
+            return network.getContract(contractName);
         } catch (Exception e) {
             e.printStackTrace();
         }
+        throw new RuntimeException("get contract error");
     }
 
     private static X509Certificate readX509Certificate(final Path certificatePath) throws IOException, CertificateException {

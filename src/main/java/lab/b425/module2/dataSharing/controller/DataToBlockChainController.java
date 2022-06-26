@@ -7,6 +7,14 @@ import lab.b425.module2.dataSharing.service.DataToBlockChainService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * <p>
+ * 数据上链路由类
+ * </p>
+ *
+ * @author MFL
+ * @since 2022-04-17
+ */
 @RestController
 @Api(tags = "数据上链")
 public class DataToBlockChainController {

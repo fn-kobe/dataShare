@@ -7,6 +7,9 @@ import com.baomidou.mybatisplus.generator.config.*;
 import com.baomidou.mybatisplus.generator.config.rules.DateType;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 
+/**
+ * mp代码生成器
+ */
 public class CodeGenerator {
 
     public static void main(String[] args) {

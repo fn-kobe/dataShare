@@ -3,6 +3,14 @@ package lab.b425.module2.dataSharing.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
+/**
+ * <p>
+ * 返回错误信息的实体类
+ * </p>
+ *
+ * @author MFL
+ * @since 2022-04-17
+ */
 @Data
 public class ErrorEntity {
     public ErrorBody error;

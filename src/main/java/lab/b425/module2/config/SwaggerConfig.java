@@ -33,21 +33,22 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .enable(flag)
                 .apiInfo(apiInfo())
-                .groupName("MFL")
+                .useDefaultResponseMessages(false)
+                .groupName("DataShare")
                 .select().apis(RequestHandlerSelectors.basePackage("lab.b425.module2")).build();
     }
 
     //配置apiInfo信息
     private ApiInfo apiInfo() {
         return new ApiInfo(
-                "Api Documentation",
-                "Api Documentation",
+                "基于区块链的多链业务协同构件",
+                "数据共享模块",
                 "1.0",
                 "urn:tos",
                 //作者信息
                 new Contact("MFL", "", "471843059@qq.com"),
-                "Apache 2.0",
-                "http://www.apache.org/licenses/LICENSE-2.0",
+                "返回上一级模块选择",
+                "http://192.168.1.103:8080/JavaCharts_war_exploded/index.jsp",
                 new ArrayList<>()
         );
     }

@@ -7,6 +7,14 @@ import lab.b425.module2.dataSharing.service.DataQueryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * <p>
+ * 数据查询路由类
+ * </p>
+ *
+ * @author MFL
+ * @since 2022-04-17
+ */
 @RestController
 @Api(tags = "数据查询")
 public class DataQueryController {

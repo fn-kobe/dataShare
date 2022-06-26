@@ -50,16 +50,16 @@ public class SdkDemo {
 
 
             //调用合约初始化方法
-            contract.createTransaction("InitLedger").submit();
+//            contract.createTransaction("InitLedger").submit();
             //调用合约查询所有资产
             byte[] queryAllAssets = contract.evaluateTransaction("GetAllAssets");
             System.out.println("所有资产：" + new String(queryAllAssets, StandardCharsets.UTF_8));
 
             //交易资产
-            contract.createTransaction("TransferAsset").submit("asset6", "Tomoko");
+            contract.createTransaction("TransferAsset").submit("asset6", "mmm");
 
             //新建资产
-            contract.createTransaction("CreateAsset").submit("asset7","black","1","mfl","100");
+//            contract.createTransaction("CreateAsset").submit("asset7", "black", "1", "mfl", "100");
 
             //查询更新后的资产
             byte[] queryAllAssetsAfter = contract.evaluateTransaction("GetAllAssets");

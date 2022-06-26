@@ -7,6 +7,14 @@ import lab.b425.module2.dataSharing.service.AuthorityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * <p>
+ * 权限管理路由类
+ * </p>
+ *
+ * @author MFL
+ * @since 2022-04-17
+ */
 @RestController
 @Api(tags = "权限管理")
 public class AuthorityController {

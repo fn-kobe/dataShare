@@ -15,7 +15,12 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- * 路由类 权限
+ * <p>
+ * 用户管理路由类
+ * </p>
+ *
+ * @author MFL
+ * @since 2022-04-17
  */
 @RestController
 @Api(tags = "用户管理")

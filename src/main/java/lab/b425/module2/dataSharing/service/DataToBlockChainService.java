@@ -14,6 +14,14 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**
+ * <p>
+ * 数据上链服务类
+ * </p>
+ *
+ * @author MFL
+ * @since 2022-04-17
+ */
 @Service
 public class DataToBlockChainService {
     /**
@@ -115,7 +123,7 @@ public class DataToBlockChainService {
         purchaseCount++;
         String PurchaseId = "PURCHASE" + purchaseCount;
         Purchase purchase = new Purchase();
-        purchase.setPurchaseId(PurchaseId);
+//        purchase.setPurchaseId(PurchaseId);
         purchase.setPurchaseCode(purchaseCode);
         purchase.setDescription(description);
         purchase.setOwner(owner);
@@ -140,7 +148,7 @@ public class DataToBlockChainService {
         Integer materialCount = materialMapper.selectCount(null);
         materialCount++;
         String materialId = "MATERIAL" + materialCount;
-        material.setMaterialId(materialId);
+//        material.setMaterialId(materialId);
         material.setMaterialCode(materialCode);
         material.setDescription(description);
         material.setPurchaseCode(purchaseCode);
@@ -152,11 +160,11 @@ public class DataToBlockChainService {
         material.setChannel(channel);
         materialMapper.insert(material);
 
-        try {
-            Thread.sleep(10);
+        /*try {
+            Thread.sleep(40);
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }
+        }*/
 
         return JSON.toJSONString(new ResponseEntity(ResponseEntity.OK, "上传采购成功", PurchaseId));
     }

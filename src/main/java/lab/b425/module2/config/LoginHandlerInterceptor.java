@@ -1,6 +1,5 @@
 package lab.b425.module2.config;
 
-import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.HandlerInterceptor;
 
 import javax.servlet.http.HttpServletRequest;
@@ -15,8 +14,7 @@ public class LoginHandlerInterceptor implements HandlerInterceptor {
         //登录成功后获取用户的session
         Object loginUser = request.getSession().getAttribute("loginUser");
         if (loginUser == null) {
-//            request.setAttribute("message", "权限不足或尚未登录");
-//            request.getRequestDispatcher("/error/un_log").forward(request,response); //重定向页面
+            //request.getRequestDispatcher("/error/un_log").forward(request,response); //页面重定向
             response.sendRedirect("/error/un_log");
             return false;
         } else {

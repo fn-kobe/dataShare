@@ -11,7 +11,7 @@ import java.util.Date;
 
 /**
  * <p>
- * 
+ * 对应数据库表格的实体类
  * </p>
  *
  * @author MFL

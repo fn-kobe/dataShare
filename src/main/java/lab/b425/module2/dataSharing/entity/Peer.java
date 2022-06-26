@@ -10,7 +10,7 @@ import java.io.Serializable;
 
 /**
  * <p>
- * 
+ * 对应数据库表格的实体类
  * </p>
  *
  * @author MFL

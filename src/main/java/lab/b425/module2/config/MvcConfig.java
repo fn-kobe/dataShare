@@ -6,6 +6,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
  * springMVC配置类
+ * 配置拦截器，指定哪些接口需要使用拦截器
  */
 @Configuration
 public class MvcConfig implements WebMvcConfigurer {

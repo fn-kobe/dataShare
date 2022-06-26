@@ -6,7 +6,6 @@ import com.alibaba.fastjson.TypeReference;
 import lab.b425.module2.dataSharing.entity.ResponseEntity;
 import lab.b425.module2.dataSharing.mapper.UserMapper;
 import lombok.Data;
-import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -104,7 +103,7 @@ class LabProjectApplicationTests {
 
 
 
-    @Test
+//    @Test
     public void jsonTest6() {
         ArrayList<String> set = new ArrayList<>();
         set.add("quantity");
@@ -117,7 +116,7 @@ class LabProjectApplicationTests {
 
     }
 
-    @Test
+//    @Test
     public void jsonTest7() {
         String[] arr = new String[] {"quantity","producer_id"};
         System.out.println(JSON.toJSONString(arr));
@@ -129,7 +128,7 @@ class LabProjectApplicationTests {
 
     }
 
-    @Test
+//    @Test
     public void jsonTest8() {
         HashSet<String> set = new HashSet<>();
         set.add("quantity");
@@ -137,7 +136,7 @@ class LabProjectApplicationTests {
         System.out.println(set.toString());
     }
 
-    @Test
+//    @Test
     public void jsonTest9() {
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("from", "from");
@@ -152,7 +151,7 @@ class LabProjectApplicationTests {
         System.out.println(maps.get("price").getClass());
     }
 
-    @Test
+//    @Test
     public void dateTest() throws ParseException {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
         Date date = dateFormat.parse("2021-11-11 10:00:00");
@@ -160,7 +159,7 @@ class LabProjectApplicationTests {
 
     }
 
-    @Test
+//    @Test
     public void dateTest2() {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
         try {
@@ -171,7 +170,7 @@ class LabProjectApplicationTests {
         }
     }
 
-    @Test
+//    @Test
     public void dateTest3() {
 
 //        if (recordRole.getDuration() != -1) {
@@ -184,7 +183,7 @@ class LabProjectApplicationTests {
 //        }
     }
 
-    @Test
+//    @Test
     public void hashTest(){
         String hash = HashUtil.hash("key", "MD5");
         System.out.println(hash);
@@ -268,7 +267,7 @@ class LabProjectApplicationTests {
         }
     }
 
-    @Test
+//    @Test
     public void timerTest(){
         Timer timer = new Timer();
         timer.scheduleAtFixedRate(new TimerTask() {
@@ -280,9 +279,15 @@ class LabProjectApplicationTests {
 
     }
 
-    @Test
+//    @Test
     public void test2(){
         System.out.println("hello world");
+    }
+
+    public static void main(String[] args) {
+        String a = "2021-10-01 18:20:00";
+        String b = "2022-10-01 16:30:59";
+        System.out.println(a.compareTo(b));
     }
 
 

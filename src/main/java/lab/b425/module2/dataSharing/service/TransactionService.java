@@ -18,6 +18,14 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * <p>
+ * 交易管理服务类
+ * </p>
+ *
+ * @author MFL
+ * @since 2022-04-17
+ */
 @Service
 public class TransactionService {
     /**

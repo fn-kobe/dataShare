@@ -17,6 +17,14 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * <p>
+ * 权限管理服务类
+ * </p>
+ *
+ * @author MFL
+ * @since 2022-04-17
+ */
 @Service
 public class AuthorityService {
     /**
@@ -112,7 +120,8 @@ public class AuthorityService {
                     Date expireTime = instance.getTime();
                     if (expireTime.compareTo(authority.getExpirationTime()) >= 0) {
                         response.setStatus(400);
-                        return JSON.toJSONString(new ErrorEntity(400, "管理员时间过期", ErrorEntity.INVALID_ARGUMENT));                    }
+                        return JSON.toJSONString(new ErrorEntity(400, "管理员时间过期", ErrorEntity.INVALID_ARGUMENT));
+                    }
                     //全部合法时， 管理员授予共享权限
                     Authority newAuthority = new Authority();
                     newAuthority.setAuthorityType("sharer");

@@ -13,6 +13,14 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * <p>
+ * 数据查询服务类
+ * </p>
+ *
+ * @author MFL
+ * @since 2022-04-17
+ */
 @Service
 public class DataQueryService {
     /**
